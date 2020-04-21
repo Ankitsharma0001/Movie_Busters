@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie-Busters </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--              --------------------------------------------                -----           -->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style_index.css" > 
+        
+         <style>
+            footer {
+                 padding: 5px 0;
+                 color: black;
+                 border-top: 1px solid;
+                 margin: auto;
+                 background-color: bisque;
+                 margin-top: 20px;
+            }
+            footer p{
+                font-size: 24px;
+            }
+         
+        </style>
+        
+    </head>
+    
+    <body class="container-fluid">
+        <div class="row"> 
+<!-- ///////////////////////////////////////////////////////////////// -->   
+           
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>   
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a style="text-decoration:none;" href="index.html" class="logo">
+                        <h1 style="text-decoration: none; color: aqua;">Movie-Busters </h1>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li style="font-size:20px"><a href="#tours">Latest Movies</a></li>
+                        <li style="font-size:20px"><a href="#tours2">Upcoming Movies</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div style="margin-top: 40px;">
+            .
+        </div>
+<!-- ////////////////////////////////////////////////////////////////  -->        
+         <img src="img2/home1.jpg"  id="img1" class="img-responsive">
+ 
+
+         
+<!--
+         <div id="background-image"  class="col-sm-6">
+            
+          <center>       
+          <div id="content" class="col-sm-6">  
+          <h1>Welcome to     <br>  Trip-India</h1>  
+          </div>
+          </center>
+         </div>
+  
+-->
+         <div id="tours" >
+            <h1> Latest Movies </h1>
+            
+            <div id="t1" class="tours_div" > 
+                <a href="#tours"><img src="img2/latest1.jpg" alt="East"></a>
+                
+            </div>
+
+            <div id="t2"  class="tours_div">
+                <a href="#tours"><img src="img2/latest2.jpg" alt="West"></a>
+                
+            </div>
+
+            <div  id="t3" class="tours_div">
+                <a href="#tours"><img src="img2/latest3.jpg" alt="North"></a>
+                    
+            </div>
+            
+            <div  id="t4" class="tours_div">
+                <a href="#tours"><img src="img2/latest4.jpg" alt="South"></a>
+                
+            </div> 
+            <div  id="t5" class="tours_div">
+                <a href="#tours"><img src="img2/latest5.jpg" alt="South"></a>
+                
+            </div>        
+        </div>
+        
+    <!-- upcoming movies  -->
+        <div id="tours2">
+            <h1> Upcoming Movies </h1>
+            
+            <div id="m1" class="tours_div" > 
+                <a href="#tours2"><img src="img2/upcoming1.jpg" alt="East"></a>
+                
+            </div>
+
+            <div id="m2"  class="tours_div">
+                <a href="#tours2"><img src="img2/upcoming2.jpg" alt="West"></a>
+                
+            </div>
+
+            <div  id="m3" class="tours_div">
+                <a href="#tours2"><img src="img2/upcoming3.jpg" alt="North"></a>
+                   
+            </div>
+            
+            <div  id="m4" class="tours_div">
+                <a href="#tours2"><img src="img2/upcoming4.jpg" alt="South"></a>
+               
+            </div> 
+            <div  id="m5" class="tours_div">
+                <a href="#tours2"><img src="img2/upcoming5.jpg" alt="South"></a>
+               
+            </div>        
+        
+        
+      
+        </div> 
+
+<script src="./angular.min.js"></script>   <script src="jquery-3.4.1.js"></script>     
+<script>
+    var intervalId;
+	var i=1;
+ 
+    const interval = setInterval(function changeImage(){
+    	
+    	const imagePath=['img2/home1.jpg','img2/home2.jpg','img2/home3.jpg','img2/home4.jpg','img2/home5.jpg'];
+    	document.getElementById("img1").src=imagePath[i];
+
+    	if(i<imagePath.length-1){
+    		i++;
+    	}
+    	else{
+    		i=0;
+    	}
+    },  2000);
+
+           
+    //  -------
+    
+     $("#m1").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       }) 
+     $("#m2").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       }) 
+     $("#m3").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       })  
+     $("#m4").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       }) 
+     $("#m5").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       })     
+    
+    
+    $("#t1").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       })  
+     $("#t2").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       })  
+     $("#t3").hover(function(){ 
+      $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       }) 
+     $("#t4").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       }) 
+    $("#t5").hover(function(){ 
+       $(this).css("background-color","aqua")
+         }, function(){
+         $(this).css("background-color", "white");
+       }) 
+</script>                                               <div id="f">       
+            <center>
+               <p>Movie-Busters helpline: 000 111 222    ||   2019 </p>
+               <p>For Feedback <a href="#f">Click Here</a></p>    <p>Contact Us <a href="#f">Click Here</a></p>
+             </center>  
+            </div>
+    </div>   
+  </body>
+</html>
